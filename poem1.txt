@@ -1,0 +1,49 @@
+*** Introductory Examples for the NLTK Book ***
+Loading text1, ..., text9 and sent1, ..., sent9
+Type the name of the text or sentence to view it.
+Type: 'texts()' or 'sents()' to list the materials.
+text1: Moby Dick by Herman Melville 1851
+text2: Sense and Sensibility by Jane Austen 1811
+text3: The Book of Genesis
+text4: Inaugural Address Corpus
+text5: Chat Corpus
+text6: Monty Python and the Holy Grail
+text7: Wall Street Journal
+text8: Personals Corpus
+text9: The Man Who Was Thursday by G . K . Chesterton 1908
+foul four woods
+foul four woods
+circumstances significance encountering Nevertheless superstitious
+
+four woods hanging
+four advantage uncertain
+accommodation circumstances respectable inclination understanding
+
+four second here
+four second here
+Philistines everlasting exceedingly peradventure generations
+
+four Until advantage
+four advantage Western
+contributed circumstances willingness responsible remembering
+
+woods second fingers
+fingers here NOT
+
+
+foul four Until
+second here Three
+
+
+four Until advantage
+four advantage Western
+contributed transactions Connecticut complicated introduction
+
+reliable music travel
+music travel A
+
+
+foul four marching
+four yellow Does
+considerable impatiently intellectual extraordinary astonishment
+
