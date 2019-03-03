@@ -3,22 +3,26 @@ class PoemPlay:
 
 
     def __init__(self,text):
-        self.text= text
+        self.text= []
         self.dist = FreqDist(text)
 
+    def get_first_line(self,length=10,distribution=5,total=5):
+        return [w for w in set(text1) if len(w) >length and self.dist[w] > distribution][:total]
     def get_long_weird_words(self,length=10,distribution=5,total=5):
-        return [w for w in set(self.text) if len(w) >length and self.dist[w] > distribution][:total]
+        return [w for w in set(text1) if len(w) >length and self.dist[w] > distribution][:total]
 
     def get_short_banal_words(self,length=10, distribution=2,total=3):
-        return [w for w in set(self.text) if len(w) < length and self.dist[w] > distribution][:total]
+        return [w for w in set(text1) if len(w) < length and self.dist[w] > distribution][:total]
 
     def get_short_weird_words(self,length=10, distribution=5,total=3):
-        return [w for w in set(self.text) if len(w) < length and self.dist[w] > distribution][:total]
+        return [w for w in set(text1) if len(w) < length and self.dist[w] > distribution][:total]
 
 
 if __name__ == "__main__":
     texts = [text1,text2,text3,text4,text5,text6,text7,text8,text9]
+
     i = 0
+    text1.concordance("monstrous")
     for t in texts:
             m = PoemPlay(t)
             print " ".join(m.get_short_banal_words())
