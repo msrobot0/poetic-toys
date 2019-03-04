@@ -2,31 +2,32 @@ from nltk.book import *
 class PoemPlay:
 
 
-    def __init__(self,text):
-        self.text= []
-        self.dist = FreqDist(text)
+    def __init__(self,text,sent):
+        self.text= text
+        self.first_line= sent
 
     def get_first_line(self,length=10,distribution=5,total=5):
-        return [w for w in set(text1) if len(w) >length and self.dist[w] > distribution][:total]
-    def get_long_weird_words(self,length=10,distribution=5,total=5):
-        return [w for w in set(text1) if len(w) >length and self.dist[w] > distribution][:total]
+        return self.first_line
 
-    def get_short_banal_words(self,length=10, distribution=2,total=3):
-        return [w for w in set(text1) if len(w) < length and self.dist[w] > distribution][:total]
+    def get_similar(self,word):
+        return self.text.similar(word)
 
-    def get_short_weird_words(self,length=10, distribution=5,total=3):
-        return [w for w in set(text1) if len(w) < length and self.dist[w] > distribution][:total]
-
+    def get_common_contexts(self,word):
+        try:
+            return self.text.common_contexts([word]).replace("_"," ")
+        except:
+            return None
 
 if __name__ == "__main__":
-    texts = [text1,text2,text3,text4,text5,text6,text7,text8,text9]
-
     i = 0
-    text1.concordance("monstrous")
-    for t in texts:
-            m = PoemPlay(t)
-            print " ".join(m.get_short_banal_words())
-            print " ".join(m.get_short_weird_words())
-            print " ".join(m.get_long_weird_words())
-            print
+    #text1.concordance("monstrous")
+    m = PoemPlay(text1,sent1)
+    for mm in m.get_first_line():
+        if "," not in mm:
+            sim = m.get_similar(mm)
+            if sim is not None :
+                print sim.replace("_"," ")
+            sim2 = m.get_common_contexts(mm)
+            if sim2 is not None:
+                print sim2.replace("_"," ")
 
